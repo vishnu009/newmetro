@@ -1,0 +1,72 @@
+@charset="utf8"
+
+
+body{
+	margin:0px;
+	padding:0px;
+	width: 960px;
+	background-color:#eeff3c;
+   padding-top: 60px; 
+}
+.container{
+
+}
+#image{
+	background: url(../img/house.jpg) no-repeat;
+	margin-top: 50px;
+	height: 420px;
+	text-indent: -99999px;
+}
+
+#login{
+	float:left;
+	margin-top: 104px;
+	
+}
+ #search{
+float:right;
+}
+.property-img{
+	background:url(../img/home1.jpg) no-repeat;
+	width: 448px;
+	height: 77px;
+	text-indent: -99999px;
+	margin-top: 46px;
+}
+.address-info{
+	width:81%;
+	float:right;
+	font-weight: bold;
+	margin-top: -45px;
+   }
+
+#footernote .p{
+	float:center;
+}
+.footer ,.push{
+	height: 142px;
+}
+.footer {
+	position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:black;
+}
+.footer #copyrights {
+float: left;
+line-height: 30px;
+font-size: 15px;
+color:white;
+}
+
+.sidebar{
+	margin-top: 49px;
+}
+.grid1{
+	margin-top: 20px;
+}
+#table{
+	width: 70%;
+}

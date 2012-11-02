@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Metro Housing Project</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Housing ,Rentals">
+      <meta name="author" content="ourCompany">
+      <!-- Le styles -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/bootstrap-responsive.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <!-- Le fav and touch icons -->
+      <link rel="shortcut icon" href="/ico/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
+    </head>
+     <body>
+      <header>
+          <div class="navbar navbar-inverse navbar-fixed-top">
+           <div class="navbar-inner">
+            <div class="container">
+           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Metro</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+               <li class="active"><a href="dashboard.html"><i class="icon-home icon-white"></i> Dash Board</a></li>
+                <li><a href="property.html">Property</a></li>
+                <li><a href="tenants.html">Tenants</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="rental.html">Rental Properties</a></li>
+                <li><a href="owners.html">Owners</a></li>
+              </ul>
+                <ul class="nav">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list icon-white"></i>Services<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="maintainance.html">Maintainance</a></li>
+                          <li class="divider"></li>
+                        <li><a href="inspections.html">Inspections</a></li>
+                       </ul>
+                     </li>
+                       <form class="navbar-search pull-left">  
+                        <input type="text" class="search-query" placeholder="Search">
+                        <button type="submit" class="btn">Search</button>
+                    </form>  
+                 </div>
+                 <ul class="nav secondary-nav pull-right">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-off icon-white"></i> Admin<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Change settings</a>
+                        <li class="divider"></li>
+                        <li><a href="#">Logout</a>
+                     </ul>
+                  </ul>
+              </div>
+         </div><!--/.nav-collapse -->
+        </div><!--end of Nav bar main fixed top -->
+    </header>
+			<div class="navbar"  id ="noticeboard">
+			<h1> Owner Details </h1>
+			<div class ="property-img">
+			sample image
+			</div>
+			<div class="address-info">
+			<p>Reference Number:12345677888 </p>
+			<p>Owner Name: Steve </p>
+			</div>
+			</div>
+			<div class ="tabs">
+			<ul id ="mytabs" class ="nav nav-tabs">
+			<li class="active">
+			<a href="#general" data-toggle="tab">General</a></li>
+			<li class>
+			<a href="#details" data-toggle="tab">Details</a></li>
+			<li class>
+			<a href="#transactions" data-toggle="tab">Transactions</a></li>
+			<li class>
+			<a href="#actions" data-toggle="tab">Actions</a></li>
+			</div>
+
+			<div id="myTabContent"class="tab-content">
+			<div class="tab-pane fade active in "id="general">
+			 <form class ="well span3">
+			<label>Reference</label>
+			<input type ="text" class="span3" />
+			<label>Property</label>
+			<input type ="text" class="span3" />
+			<label>FullName</label>
+			<input type ="text" class="span3" />
+			<label>Company</label>
+			<input type ="text" class="span3" />
+			<label>Business</label>
+			<input type ="text" class="span3" />
+			<label>ABN</label>
+			<input type ="text" class="span3" />
+			<label>Business Phone Number</label>
+			<input type ="text" class="span3" />
+			<label>Home Number</label>
+			<input type ="text" class="span3" />
+			<label>Fax</label>
+			<input type ="text" class="span3" />
+			<label>Email</label>
+			<input type ="text" class="span3" />
+			<label>Website</label>
+			<input type ="text" class="span3" />
+			<label>Salutation</label>
+			<input type ="text" class="span3" />
+			<label>Category</label>
+			<input type ="text" class="span3" />
+			<label>Reference</label>
+			<input type ="text" class="span3" />
+			<label>Address</label>
+			<input type ="text" class="span3" />
+			<label>File AS</label>
+			<div class="controls">
+			<select id="select01">
+			<option>something</option>
+			<option>2</option>
+			<option>3</option>
+			</select>
+			</div>
+			<a href="#" class="btn btn-primary">Next</a>
+			<button class="btn btn-primary">Save</button>
+			<button class ="btn btn-primary">Reset</button>
+			<button class ="btn btn-primary">Print PDF</button>
+			</form>
+			</div>
+			<div class="tab-pane fade"id="details">
+			<form class ="well span3">
+			<label>Rent</label>
+			<input type ="text" class="span3" />
+			<label>Let Fee</label>
+			<div class="controls">
+			<select id="select01">
+			<option>Amount</option>
+			<option>Percentage</option>
+			</select>
+			<input type ="text" class="span3" />
+			</div>			
+			<label>Rent Due</label>
+			<div class="controls">
+			<select id="select01">
+			<option>Monthly</option>
+			<option>Fortnightly</option>
+			<option>four weekly</option>
+			<option>weekly</option>
+			</select>
+			</div>			 
+			<label>Paid to</label>
+			<input type ="date" value/>
+			<label>Periods in advance</label>
+			<div class="controls">
+			<select id="select01">
+				<option>something</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+			</div>
+			<label>Period in advance</label>
+			<input type ="date" value/>
+			<label>Rent in credit</label>
+			<input type ="text" class="span3" />
+			<label>Rent review</label>
+			<input type ="date" value/>
+			<label>Bond required</label>
+			<input type ="text" class="span3" />
+			<label>New Rent</label>
+			<input type ="text" class="span3" />
+			<label>Bond Recieved</label>
+			<input type ="text" class="span3" />
+			<label>Inaugural lease</label>
+			<input type ="date" value/>
+			<label>Lease term</label>
+			<input type ="text" class="span3" />
+			<label>Lease Begin</label>
+			<input type ="date" value />
+			<label>Lease End</label>
+			<input type ="date" value />
+			<label>Commnets</label>
+			<input type="text" class="span3" />				
+			<button class="btn btn-primary">Save</button>
+			<button class ="btn btn-primary">Reset</button>
+			<button class ="btn btn-primary">Print PDF</button>
+			</form>
+			</div>
+			<div class="tab-pane fade"id="transactions">
+			<form class="well span3">
+			<label>Show All <span>(Transactions for this tenant)</span></label>
+	 		 <div class="controls">
+	  		 <select id="select01">
+					 <option>All</option>
+					 <option>Journal</option>
+					 <option>Journal Credits</option>
+					 <option>Journal Debits</option>
+					 <option>Payments</option>
+					 <option>Receiept</option>
+					 <option>Reverse Payments</option>
+					 <option>Reverse Receipts</option>
+				</select>
+				</div>
+				<button class="btn btn-primary">Save</button>
+				<button class ="btn btn-primary">Reset</button>
+				<button class ="btn btn-primary">Print PDF</button>
+			 </form>
+
+			</div>
+				<div class="tab-pane fade"id="actions">
+				 <form class="well span3">
+					<label>Show All</label>
+					 <div class="controls">
+					<select id="select01">
+					 <option>All</option>
+					 <option>Conversation</option>
+					 <option>Document</option>
+					 <option>Email</option>
+					 <option>Fax</option>
+					 <option>Letter</option>
+					 <option>Meeting</option>
+					 <option>Note</option>
+					 <option>Phone Call</option>
+					 <option>Task</option>
+					 <option>Maintainace</option>
+					 <option>Inspection</option>
+					 </select>
+				 </div>
+				 <label>Actions for this Property</label>
+				 <input type="checkbox" >Show Completed actions
+					 <div id="inspection">
+						<p>Inspection</p>
+					</div>
+					<div id="Letter">
+						<p>Some Letter </p>
+					</div>
+				<button class="btn btn-primary">Save</button>
+				<button class ="btn btn-primary">Reset</button>
+				<button class ="btn btn-primary">Print PDF</button>
+			</form>
+			</div>
+     	</div>
+		<footer class="footer row push"><!--start of footer -->
+	      <div class="span6">
+	      <div id="copyrights">&copy; Metro  2012 All Rights Reserved  </div>
+	    </div><!--end of div for span 6-->
+	    </footer>
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script>
+			$('#mytabs a[href="#general"]').tab('show');
+			$('#mytabs a[href="#details"]').tab('show'); 
+			$('#mytabs a[href="#description"]').tab('show'); 
+			$('#mytabs a[href="#custom"]').tab('show');
+			$('#mytabs a[href="#inventory"]').tab('show');
+			$('#mytabs a[href="#actions"]').tab('show');
+			$('#mytabs a[href="#weblink"]').tab('show');
+
+			})
+			</script>
+			<script src="js/jquery.js"></script>
+			<script src="js/bootstrap-dropdown.js"></script>
+			<script src="js/bootstrap-scrollspy.js"></script>
+			<script src="js/bootstrap-tab.js"></script>
+			<script src="js/bootstrap-tooltip.js"></script>
+			<script src="js/bootstrap-popover.js"></script>
+			<script src="js/bootstrap-button.js"></script>
+			<script src="js/bootstrap-collapse.js"></script>
+			<script src="js/bootstrap-carousel.js"></script>
+			<script src="js/bootstrap-typeahead.js"></script>
+			<script src="js/bootstrap-date.js"></script>
+
+			</body>
+			</html>

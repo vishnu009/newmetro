@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Metro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Metro">
+    <meta name="author" content="Software solutions">
+     <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+        </head>
+      <body>
+     <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Metro</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+             <li class="active"><a href="adminview.html"><i class="icon-home icon-white"></i> Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div><!--end of nav bar class-->
+</header>
+ <div class="container"><!--start of container -->
+ <form class="form-horizontal" id="addnotes" method='post' action='#'>
+  <fieldset>
+  <legend>Please Enter Your Details</legend>
+      <div class="control-group">
+        <label class="control-label">First Name <span class="astrick">*</span> </label>
+        <div class="controls">
+        <input type="text" class="input" id="fname" name="fname" required="true">
+        </div>
+    </div>
+     <div class="control-group">
+        <label class="control-label">Last Name<span class="astrick">*</span> </label>
+        <div class="controls">
+        <input type="text" class="input" id="lname" name="lname" required="true">
+        </div>
+    </div>
+     <div class="control-group">
+        <label class="control-label">Email<span class="astrick">*</span> </label>
+        <div class="controls">
+        <input type="email" class="input" id="email" name="email" required="true">
+        </div>
+    </div>
+     <div class="control-group">
+        <label class="control-label">Enter Password<span class="astrick">*</span> </label>
+        <div class="controls">
+        <input type="password" class="input" id="pass" name="pass" required="true">
+        </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Confirm Password<span class="astrick">*</span></label>
+     <div class="controls">
+      <input type="password" class="input" id="cpassword" name="cpassword" required="true">
+      </div>
+    </div>
+    <a href="main.html" class="btn btn-primary" type="button">Submit</a>
+    <button class="btn btn-primary" type="reset">Cancel</button>
+
+  </form>
+    </div><!--end of container-->
+    <footer class="footer"><!--start of footer -->
+        <div class="span6">
+        <div id="copyrights">&copy;2012 Software Company</div>
+    </div><!--end of div for span 6-->
+   <footer>
+     <!-- Le javascript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src=" js/jquery.js"></script>
+      <script src="js/bootstrap-transition.js"></script>
+      <script src="js/bootstrap-alert.js"></script>
+      <script src="js/bootstrap-modal.js"></script>
+      <script src="js/bootstrap-dropdown.js"></script>
+      <script src="js/bootstrap-scrollspy.js"></script>
+      <script src="js/bootstrap-tab.js"></script>
+      <script src="js/bootstrap-tooltip.js"></script>
+      <script src="js/bootstrap-popover.js"></script>
+      <script src="js/bootstrap-button.js"></script>
+      <script src="js/bootstrap-collapse.js"></script>
+      <script src="js/bootstrap-carousel.js"></script>
+
+
+     
+   </body>
+   </html>
