@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Metro Housing Project</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Housing ,Rentals">
+      <meta name="author" content="ourCompany">
+      <!-- Le styles -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/bootstrap-responsive.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/datepicker.css" rel="stylesheet">
+      <link href="css/fullcalender.css" rel="stylesheet">
+     <link rel='stylesheet' type='text/css' href="css/fullcalendar.print.css" media="print" />
+      <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <!-- Le fav and touch icons -->
+      <link rel="shortcut icon" href="/ico/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
+    </head>
+     <body>
+      <header>
+          <div class="navbar navbar-inverse navbar-fixed-top">
+           <div class="navbar-inner">
+            <div class="container">
+           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span></a>
+            <a class="brand" href="#">Metro</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+               <li class="active"><a href="dashboard.html"><i class="icon-home icon-white"></i> Dash Board</a></li>
+                <li><a href="property.html">Property</a></li>
+                <li><a href="tenants.html">Tenants</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="rental.html">Rental Properties</a></li>
+                <li><a href="owners.html">Owners</a></li>
+              </ul>
+                <ul class="nav">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list icon-white"></i>Services<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="maintainance.html">Maintainance</a></li>
+                          <li class="divider"></li>
+                        <li><a href="inspections.html">Inspections</a></li>
+                       </ul>
+                     </li>
+                       <form class="navbar-search pull-left">  
+                        <input type="text" class="search-query" placeholder="Search">
+                        <button type="submit" class="btn">Search</button>
+                    </form>  
+                 </div>
+                 <ul class="nav secondary-nav pull-right">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-off icon-white"></i> Admin<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Change settings</a>
+                        <li class="divider"></li>
+                        <li><a href="#">Logout</a>
+                     </ul>
+                  </ul>
+              </div>
+         </div><!--/.nav-collapse -->
+        </div><!--end of Nav bar main fixed top -->
+    </header>
+     <div class ="property-img">
+            sample image
+            </div>
+         <div class="address-info">
+        <p>Reference Number:12345677888 </p>
+        <p> Owner Name: XXXXXXX </p>
+        <p> Mobile : 1112223333</p>
+        </div>
+   <div class="container-fluid sidebar top-space">
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="well sidebar-nav ">
+            <ul class="nav nav-list">
+              <li class="nav-header">Tenants</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Tenants</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Contacts</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      <div class="span8">
+     <div class="row-fluid">
+     <div class="tabbable columns">
+      <a href="#" class="btn btn-primary">Edit</a>
+       <a href="#" class="btn btn-primary">Save</a>
+
+     <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a id="n.1" href="#general" data-toggle="tab">General</a></li>
+        <li class=""><a id="n.2" href="#details" data-toggle="tab"> Details</a></li>
+        <li class=""><a id="n.2" href="#propdetails" data-toggle="tab"> Property Details</a></li>
+         <li><a id="n.5" href="#paymentdetails" data-toggle="tab">Payment Details</a></li>
+        <li><a id="n.6" href="#sale" data-toggle="tab">Sale</a></li>
+        <li class=""> <a id="n.3" href="#trans" data-toggle="tab">Transcations</a></li>
+        <li><a id="n.4" href="#actions" data-toggle="tab">Action List</a></li>
+       
+      </ul>
+   <form class="form-horizontal" name="add_owner">
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="general">
+              <div class="control-group">
+              <label class="control-label">Reference </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">File As </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+
+             <div class="control-group">
+              <label class="control-label">Title </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>DR</option>
+                <option>Mr</option>
+                <option>Ms</option>
+                <option>Miss</option>
+                <option>Mrs</option>
+              </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">First Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Middle Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Last Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Prefered Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">ABN </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Unit Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">House Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Type </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">City/Suburb/Town </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">State </label>
+               <div class="controls">
+                <select name="state" class="input-medium">
+                <option value>ACT</option value>
+                <option value>NSW</option value>
+                <option value>NT</option value> 
+                <option value>QLD</option value>
+                <option value>SA</option value>
+                <option value>TAS</option value> 
+                <option value>VIC</option value>
+                <option value>WA</option value> 
+            </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Postcode </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+
+             <div class="control-group">
+              <label class="control-label">Home Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Business Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Mobile Number1 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Mobile Number2 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Email 1 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Email 2 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Skype </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Emergency Contact Person </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Emergency Contact Details </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Authorization Amount for Maintenance</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+
+          </div><!--end of general tab for owners-->
+      <div class="tab-pane fade  in" id="details">
+         <div class="control-group">
+              <label class="control-label">Accountant's Details </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Statement to Accouts </label>
+               <div class="controls">
+                  <select class="input-medium">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Mailing Address/Email for Accountant </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Emmergency Contact Details </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Authorisation Amount for Maintainance </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Prefered Trades People </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Trade </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Conatct Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Additional Notes </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+            </div><!--end of details for owners-->
+         <div class="tab-pane fade  in" id="paymentdetails">
+             <div class="control-group">
+              <label class="control-label">Property Manager </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+            <div class="control-group">
+              <label class="control-label">Payment Frequency  </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option> Weekly</option>
+                <option>Fortnightly</option>
+                <option>Monthly</option>
+                </select>
+             </div>
+             </div>             
+             <div class="control-group">
+              <label class="control-label">Paymennt Method </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option> Direct Debit</option>
+                <option>Cash</option>
+                <option>Cheque</option>
+               </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Bank Name</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Account Name</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">BSB </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Account Number</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+              <div class="control-group">
+              <label class="control-label">Admin/Statement Fee</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+              <div class="control-group">
+              <label class="control-label">Withhold Amount</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Withhold Reason</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+
+           </div><!--payment details div closes here -->
+            <div class="tab-pane fade  in" id="trans">
+             <div class="control-group">
+              <label class="control-label">Filter </label>
+               <div class="controls">
+                <select class="input-medium">              
+                  <option>Paid to </option>
+                  <option>Recieved from</option>
+                </select>
+              </div>
+             </div>
+             <table class="table table-striped table-bordered table-condensed">
+              <tr>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Description</th>
+              <th>Type</th>
+              </tr>
+            </table>
+           </div><!--trans for owner ends here-->
+            <div class="tab-pane fade  in" id="actions">
+             <div class="control-group">
+              <label class="control-label">Cotact with </label>
+               <div class="controls">
+                <select class="input-medium">              
+                  <option>Owner</option>
+                  <option>Tenant</option>
+                </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Cotact Type </label>
+               <div class="controls">
+                <select class="input-medium">              
+                 <option>Conversation</option>
+                      <option>Document</option>
+                      <option>Email</option>
+                      <option>Fax</option>
+                      <option>Letter</option>
+                      <option>Meeting</option>
+                      <option>Note</option>
+                      <option>Phone Call</option>
+                      <option>Task</option>
+                      <option>Maintainace</option>
+                      <option>Inspection</option>
+                </select>
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Date   From</label>
+               <div class="controls">
+                <input type ="text" class="input-medium dt"> 
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Date   To</label>
+               <div class="controls">
+                <input type ="text" class="input-medium dt"> 
+              </div>
+            </div>
+            <table class="table table-striped table-bordered table-condensed">
+              <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Created By</th>
+              <th>Contact with</th>
+              <th>Description</th>
+              </tr>
+            </table>
+            </div><!--end of action tab-->  
+            <div class="tab-pane fade  in" id="sale">
+              <div class="control-group">
+              <label class="control-label">Property Reference Number </label>
+               <div class="controls">
+                <select class="input-medium">
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+             </div>
+
+             <div class="control-group">
+              <label class="control-label">Agent's Name </label>
+               <div class="controls">
+                <input type ="text"class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Sale Date </label>
+               <div class="controls">
+                <input type ="text"class="input-medium dt">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label"> Sale Type</label>
+               <div class="controls">
+                <select multiple ="multiple"class="input-medium">
+                  <option>Private</option>
+                  <option>Auction</option>
+                </select>
+              </div>
+             </div>
+           </div><!--end of sale tab-->
+           <div class="tab-pane fade  in" id="propdetails">
+             <div class="control-group">
+              <label class="control-label">Number of Properties </label>
+               <div class="controls">
+                <input type ="text"class="input-medium" readonly>
+              </div>
+             </div>
+              <div class="accordion" id="accordion2">  
+            <div class="accordion-group">  
+              <div class="accordion-heading">  
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">  
+                  Property 1
+                </a>  
+              </div>  
+              <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">  
+                <div class="accordion-inner">  
+               <div class="control-group">
+                <div class="control-group">
+              <label class="control-label">Reference </label>
+               <div class="controls">
+                <input type ="text"class="input-medium" readonly>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Property Manager </label>
+               <div class="controls">
+                <input type ="text"class="input-medium" readonly>
+              </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Unit Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">House Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Type </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">City/Suburb/Town </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">State </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+                      
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Postcode </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+              </div>
+             </div>
+                       
+           <div class="control-group">
+              <label class="control-label">Ownership </label>
+               <div class="controls">
+                    <select class="input-medium">
+                    <option>Full Owner</option>
+                    <option>Part Owner</option>
+                  </select>
+             </div>
+           </div> 
+
+             
+
+
+
+          </div><!--for main div closes here-->
+         </form>
+       <script src="js/jquery.js"></script>
+     <script src="js/jquery-1.8.1.min.js"></script>
+     <script src="js/bootstrap-dropdown.js"></script>
+     <script src="js/bootstrap-scrollspy.js"></script>
+     <script src="js/bootstrap-tab.js"></script>
+     <script src="js/bootstrap-tooltip.js"></script>
+     <script src="js/bootstrap-popover.js"></script>
+     <script src="js/bootstrap-button.js"></script>
+     <script src="js/bootstrap-collapse.js"></script>
+     <script src="js/bootstrap-carousel.js"></script>
+     <script src="js/bootstrap-typeahead.js"></script>
+     <script src="js/bootstrap-date.js"></script>
+     <script src="js/bootstrap-datepicker.js"></script>
+     <script src="js/jquery-ui-1.8.23.custom.min.js"></script>
+     <script src="js/fullcalendar.min.js"></script>
+      <script>
+        $('#mytabs a[href="#general"]').tab('show');
+        $('#mytabs a[href="#details"]').tab('show'); 
+        $('#mytabs a[href="#propdetails"]').tab('show');
+        $('#mytabs a[href="#trans"]').tab('show'); 
+        $('#mytabs a[href="#actions"]').tab('show');
+        $('#mytabs a[href="#paymentdetails"]').tab('show'); 
+        $('#mytabs a[href="#sale"]').tab('show');
+        $('#mytabs a[href="#vacating"]').tab('show');
+        $('#mytabs a[href="#tribunal"]').tab('show'); 
+        $('#mytabs a[href="#other"]').tab('show');
+        });
+    </script>
+    <script type="text/javascript">
+     $(function(){
+        window.prettyPrint && prettyPrint();
+      $('#dt1').datepicker({
+        format: 'dd-mm-yyyy'
+      });
+      $('.dt').datepicker({
+        format: 'dd-mm-yyyy'
+      });
+    });
+
+   </script>
+    </body>
+</html>

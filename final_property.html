@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Metro Housing Project</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Housing ,Rentals">
+      <meta name="author" content="ourCompany">
+      <!-- Le styles -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/bootstrap-responsive.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/datepicker.css" rel="stylesheet">
+      <link href="css/fullcalender.css" rel="stylesheet">
+     <link rel='stylesheet' type='text/css' href="css/fullcalendar.print.css" media="print" />
+
+      <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <!-- Le fav and touch icons -->
+      <link rel="shortcut icon" href="/ico/favicon.ico">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
+    </head>
+     <body>
+      <header>
+          <div class="navbar navbar-inverse navbar-fixed-top">
+           <div class="navbar-inner">
+            <div class="container">
+           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span></a>
+            <a class="brand" href="#">Metro</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+               <li class="active"><a href="dashboard.html"><i class="icon-home icon-white"></i> Dash Board</a></li>
+                <li><a href="property.html">Property</a></li>
+                <li><a href="tenants.html">Tenants</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="rental.html">Rental Properties</a></li>
+                <li><a href="owners.html">Owners</a></li>
+              </ul>
+                <ul class="nav">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list icon-white"></i>Services<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="maintainance.html">Maintainance</a></li>
+                          <li class="divider"></li>
+                        <li><a href="inspections.html">Inspections</a></li>
+                       </ul>
+                     </li>
+                       <form class="navbar-search pull-left">  
+                        <input type="text" class="search-query" placeholder="Search">
+                        <button type="submit" class="btn">Search</button>
+                    </form>  
+                 </div>
+                 <ul class="nav secondary-nav pull-right">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-off icon-white"></i> Admin<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Change settings</a>
+                        <li class="divider"></li>
+                        <li><a href="#">Logout</a>
+                     </ul>
+                  </ul>
+              </div>
+         </div><!--/.nav-collapse -->
+        </div><!--end of Nav bar main fixed top -->
+    </header>
+     <div class ="property-img">
+            sample image
+            </div>
+         <div class="address-info">
+        <p>Reference Number:12345677888 </p>
+        <p> Manager  Name: XXXXXXX </p>
+        </div>
+   <div class="container-fluid sidebar top-space">
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="well sidebar-nav ">
+            <ul class="nav nav-list">
+              <li class="nav-header">Tenants</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Tenants</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Contacts</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      <div class="span9">
+     <div class="row-fluid">
+     <div class="tabbable columns">
+      <a href="#" class="btn btn-primary">Edit</a>
+       <a href="#" class="btn btn-primary">Save</a>
+
+     <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a id="n.1" href="#general" data-toggle="tab">General</a></li>
+        <li class=""><a id="n.2" href="#details" data-toggle="tab"> Details</a></li>
+        <li><a id="n.4" href="#des" data-toggle="tab">Description</a></li>
+        <li><a id="n.6" href="#other" data-toggle="tab">Other Details</a></li>
+        <li><a id="n.5" href="#inventory" data-toggle="tab">Keys</a></li>
+        <li class=""><a id="n.2" href="#ownerDetails" data-toggle="tab"> Owner Details</a></li>
+        <li class=""> <a id="n.3" href="#tenantDetails" data-toggle="tab">Tenant Details</a></li>
+        <li><a id="n.6" href="#actions" data-toggle="tab">Action List</a></li>
+        <li><a id="n.6" href="#trans" data-toggle="tab">Transaction List</a></li>
+        
+     </ul>
+   <form class="form-horizontal" name="add_property">
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="general">
+              <div class="control-group">
+              <label class="control-label">Reference No</label>
+               <div class="controls">
+               <input type="text" class="input-medium validate[required] required">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">File As</label>
+               <div class="controls">
+               <input type="text" class="input-medium validate[required]">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Property Manager</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Leah</option>
+                <option>Sid</option>
+                <option>Test</option>
+              </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Branch Name</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>CBD</option>
+                <option>Balwyn</option>
+                <option>Collingwood</option>
+              </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Number of Tenants</label>
+               <div class="controls">
+               <input type="text" class="input-medium"readonly  >
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Rental Type </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Residential</option>
+                <option>Commercial</option>
+                </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Property Type</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>House</option>
+                <option>Town House</option>
+                <option>Appartment</option>
+                <option>Unit </option>
+                <option>Villa </option>
+                <option>Block of Units</option>
+                <option>Acreage</option>
+                <option>Shop</option>
+                <option>Ware House</option>
+               </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Building Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium validate[required]">
+              </div>
+             </div>
+
+             <div class="control-group">
+              <label class="control-label">Unit Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium validate[required]">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">House Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Type </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">City/Suburb/Town </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">State </label>
+               <div class="controls">
+                <select name="state" id="state" class="input-medium">
+                <option value>ACT</option value>
+                <option value>NSW</option value>
+                <option value>NT</option value> 
+                <option value>QLD</option value>
+                <option value>SA</option value>
+                <option value>TAS</option value> 
+                <option value>VIC</option value>
+                <option value>WA</option value> 
+            </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Postcode </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Map Reference No </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+            <input type="submit"/>
+           </div><!--end of general tab for property-->
+           <div class="tab-pane fade in " id="details">
+              <div class="control-group">
+              <label class="control-label">Rent Amount</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Rent Frequency</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Weekely</option>
+                <option>Fortnightly</option>
+                <option>Four Weekly</option>
+                <option>Monthly</option>
+               </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Management Fee %</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Maintainace Fee</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Bond Required</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Leasing Fee</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+               <span>
+                <select class="input-mini">
+                  <option>$</option>
+                  <option>%</option>
+                </select>
+              </span>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Marketing Fee</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Management Amount </label>
+               <div class="controls">
+               <input type="text" class="input-medium" readonly>
+              </div>
+            </div>
+              <div class="control-group">
+              <label class="control-label">Routine Inspection Fee</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Statement/Admin Fee</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>            
+            <div class="control-group">
+              <label class="control-label">PPM</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">End of Financial Year Fee</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Builder/Developer Name</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+
+              <div class="control-group">
+              <label class="control-label">Management Expiry</label>
+               <div class="controls">
+               <input type="text" class="input-medium dt">
+              </div>
+            </div>
+              <div class="control-group">
+              <label class="control-label">Settlement Date</label>
+               <div class="controls">
+               <input type="text" class="input-medium dt">
+              </div>
+            </div>
+             
+            <div class="control-group">
+              <label class="control-label">Urgent Repairs Amount</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">General Repairs Allowance</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+
+            </div><!---end of details tab for proprty-->
+            <div class="tab-pane fade in " id="des">
+              <div class="control-group">
+              <label class="control-label">Bedroom</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Any</option>
+                <option>Studio</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+               </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Bathroom</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Any</option>
+                <option>1+</option>
+                <option>2+</option>
+                <option>3+</option>
+                <option>4+</option>
+                <option>5+</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Carspace</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Any</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Furnished</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Cooling</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Heating</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Description</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+               </div>
+             </div>
+             
+        </div><!--end for des-->
+          <div class="tab-pane fade  in" id="ownerDetails">
+              <div class="control-group">
+              <label class="control-label">Number of Owners</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <table class="table table-striped table-bordered table-condensed">
+              <tr>
+              <th>Reference Number
+              </th>
+              <th>Name</th>
+              <th>Mobile</th>
+             <th> View<i class="icon-file"></i></th>
+            </tr>
+          </table>
+        </div><!--end of owner details-->
+        <div class="tab-pane fade  in" id="tenantDetails">
+              <div class="control-group">
+              <label class="control-label">Number of Tenants </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <table class="table table-striped table-bordered table-condensed">
+              <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+             <th> View<i class="icon-file"></i></th>
+            </tr>
+          </table>
+        </div><!--end of Tenant details-->
+        <div class="tab-pane fade  in" id="actions">
+             <div class="control-group">
+              <label class="control-label">Cotact with </label>
+               <div class="controls">
+                <select class="input-medium">              
+                  <option>Owner</option>
+                  <option>Tenant</option>
+                </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Cotact Type </label>
+               <div class="controls">
+                <select class="input-medium">              
+                 <option>Conversation</option>
+                      <option>Document</option>
+                      <option>Email</option>
+                      <option>Fax</option>
+                      <option>Letter</option>
+                      <option>Meeting</option>
+                      <option>Note</option>
+                      <option>Phone Call</option>
+                      <option>Task</option>
+                      <option>Maintainace</option>
+                      <option>Inspection</option>
+                </select>
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Date   From</label>
+               <div class="controls">
+                <input type ="text" class="input-medium dt"> 
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Date   To</label>
+               <div class="controls">
+                <input type ="text" class="input-medium dt"> 
+              </div>
+            </div>
+            <table class="table table-striped table-bordered table-condensed">
+              <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Created By</th>
+              <th>Contact with</th>
+              <th>Description</th>
+              <th>Compleated</th>
+              <th>View<i class="icon-file"></i></th>
+              </tr>
+            </table>
+            </div><!--end of action tab-->  
+             <div class="tab-pane fade  in" id="trans">
+             <div class="control-group">
+              <label class="control-label">Filter </label>
+               <div class="controls">
+                <select class="input-medium">              
+                  <option>Paid to </option>
+                  <option>Recieved from</option>
+                </select>
+              </div>
+             </div>
+             <table class="table table-striped table-bordered table-condensed">
+              <tr>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Description</th>
+              <th>Type</th>
+              </tr>
+            </table>
+           </div><!--trans for owner ends here-->
+           <div class="tab-pane fade  in" id="inventory">
+             <div class="control-group">
+              <label class="control-label">Key Number </label>
+               <div class="controls">
+                <input type="text" class="input-medium">
+               </div>
+             </div>
+               <div class="control-group">
+               <label class="control-label">Description </label>
+                <div class="controls">
+                <input type="text" class="input-medium">
+               </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Remote </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Swipe Card </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+                <div class="control-group">
+              <label class="control-label">Security FOB </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+                <div class="control-group">
+              <label class="control-label">Recreation Pass </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+             </div><!--end of inventory -->
+
+             <div class="tab-pane fade  in" id="other">
+             <div class="control-group">
+              <label class="control-label">Insurace Renewal(Building) </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Insurace Renewal(Landlord) </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Smoke Alarm Maintenance </label>
+               <div class="controls">
+                <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Annual Pest Inspection </label>
+               <div class="controls">
+                <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+               <div class="control-group">
+               <label class="control-label">Annual Gutter Clean </label>
+               <div class="controls">
+                <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+               </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Pets Allowed </label>
+               <div class="controls">
+                <select  class="input-medium ">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select> 
+               </div>
+             </div>
+               <div class="control-group">
+              <label class="control-label">Pet Type </label>
+               <div class="controls">
+                <select  class="input-medium ">
+                  <option>Dog</option>
+                  <option>Cat</option>
+                </select> 
+               </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Property for Sale </label>
+               <div class="controls">
+                <select  class="input-medium ">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select> 
+               </div>
+             </div>
+                <div class="control-group">
+              <label class="control-label">Agent Details </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Date Listed For Sale </label>
+               <div class="controls">
+               <input type="text" class="input-medium dt">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Private or Auction </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Asking Price </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">OC/Strata Manager</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Conntact Person</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Contact Number</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Building Manager Name</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Contact Number</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Lease Renewal Fee</label>
+               <div class="controls">
+                <input type="text" class="input-medium">
+                <span> 
+                <select class="input-mini">
+                <option>$</option>
+                <option>%</option>
+               </select>
+               </span>
+               </div>
+              </div>
+              <div class="control-group">
+              <label class="control-label">Paying Council Rates</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+              </div>
+            </div>
+              <div class="control-group">
+              <label class="control-label">Due</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Quarterly</option>
+                <option>Annually</option>
+               </select>
+              </div>
+            </div>
+              <div class="control-group">
+              <label class="control-label">Name of Municipality</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Paying Water Bill</label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+               </select>
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Water Provider</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Tribunal Charges</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Additional Charges</label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+            </div>
+              <div class="control-group">
+               <label class="control-label">Additional Details </label>
+               <div class="controls">
+                <textarea rows ="3" ></textarea>
+               </div>
+             </div>
+          </div><!--end of other details-->
+     </div><!--end of main div for tab -content-->
+   </form><!-- end of form to add property-->
+     <script src="js/jquery.js"></script>
+     <script src="js/jquery-1.8.1.min.js"></script>
+     <script src="js/bootstrap-dropdown.js"></script>
+     <script src="js/bootstrap-scrollspy.js"></script>
+     <script src="js/bootstrap-tab.js"></script>
+     <script src="js/bootstrap-tooltip.js"></script>
+     <script src="js/bootstrap-popover.js"></script>
+     <script src="js/bootstrap-button.js"></script>
+     <script src="js/bootstrap-collapse.js"></script>
+     <script src="js/bootstrap-carousel.js"></script>
+     <script src="js/bootstrap-typeahead.js"></script>
+     <script src="js/bootstrap-date.js"></script>
+     <script src="js/bootstrap-datepicker.js"></script>
+     <script src="js/jquery-ui-1.8.23.custom.min.js"></script>
+     <script src="js/fullcalendar.min.js"></script>
+     <script src="js/jquery.validationEngine.js"></script>
+     <script src="js/jquery.validationEngine-en.js"></script>
+      <script>
+        $('#mytabs a[href="#general"]').tab('show');
+        $('#mytabs a[href="#details"]').tab('show'); 
+        $('#mytabs a[href="#ownerDetails"]').tab('show');
+        $('#mytabs a[href="#tenantDetails"]').tab('show'); 
+        $('#mytabs a[href="#actions"]').tab('show');
+        $('#mytabs a[href="#inventory"]').tab('show'); 
+        $('#mytabs a[href="#des"]').tab('show');
+        $('#mytabs a[href="#other"]').tab('show');
+        $('#mytabs a[href="#tras"]').tab('show');        
+       
+        });
+    </script>
+    <script type="text/javascript">
+     $(function(){
+        window.prettyPrint && prettyPrint();
+      $('#dt1').datepicker({
+        format: 'dd-mm-yyyy'
+      });
+      $('.dt').datepicker({
+        format: 'dd-mm-yyyy'
+      });
+    });
+
+   </script>
+    </body>
+</html>

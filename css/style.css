@@ -2,11 +2,10 @@
 
 
 body{
-	margin:0px;
-	padding:0px;
-	width: 960px;
-	background-color:#eeff3c;
-   padding-top: 60px; 
+	margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
 }
 .container{
 
@@ -17,9 +16,10 @@ body{
 	height: 420px;
 	text-indent: -99999px;
 }
+.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
 
 #login{
-	float:left;
+	float:left;		
 	margin-top: 104px;
 	
 }
@@ -31,7 +31,7 @@ float:right;
 	width: 448px;
 	height: 77px;
 	text-indent: -99999px;
-	margin-top: 46px;
+	margin-top: 30px;
 }
 .address-info{
 	width:81%;
@@ -69,4 +69,25 @@ color:white;
 }
 #table{
 	width: 70%;
+}
+.top-space{
+	margin-top: 40px;
+}
+#calendar {
+		width: 400px;
+		margin: 0 auto;
+		}
+.to-do {
+	margin-top: 50px;
+		}
+.mycols{
+	width:200px;
+	float: left;
+}
+.mycols1{
+	width:200px;
+	 margin-left: 60px;
+}
+.smy_position{
+	margin-top: 30px;
 }
