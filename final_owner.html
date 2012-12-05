@@ -111,8 +111,9 @@
      <ul id="myTab" class="nav nav-tabs">
         <li class="active"><a id="n.1" href="#general" data-toggle="tab">General</a></li>
         <li class=""><a id="n.2" href="#details" data-toggle="tab"> Details</a></li>
-        <li class=""><a id="n.2" href="#propdetails" data-toggle="tab"> Property Details</a></li>
+        <li class=""><a id="n.2" href="#prefer" data-toggle="tab"> Preference</a></li>
          <li><a id="n.5" href="#paymentdetails" data-toggle="tab">Payment Details</a></li>
+       <li><a href="#accountant" data-toggle="tab">Accountant's Details</a></li>
         <li><a id="n.6" href="#sale" data-toggle="tab">Sale</a></li>
         <li class=""> <a id="n.3" href="#trans" data-toggle="tab">Transcations</a></li>
         <li><a id="n.4" href="#actions" data-toggle="tab">Action List</a></li>
@@ -292,64 +293,63 @@
           </div><!--end of general tab for owners-->
       <div class="tab-pane fade  in" id="details">
          <div class="control-group">
-              <label class="control-label">Accountant's Details </label>
+              <label class="control-label">Property Manager</label>
                <div class="controls">
                <input type="text" class="input-medium">
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Statement to Accouts </label>
+              <label class="control-label">Payment Series </label>
                <div class="controls">
                   <select class="input-medium">
-                    <option>Yes</option>
-                    <option>No</option>
+                    <option>Weekly</option>
+                    <option>Fortnightly</option>
+                    <option>Monthly</option>
                   </select>
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Mailing Address/Email for Accountant </label>
+              <label class="control-label">Payment Method </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>Cash</option>
+                <option>Cheque</option>
+                <option>EFT</option>
+                  </select>
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Bank </label>
                <div class="controls">
                <input type="text" class="input-medium">
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Emmergency Contact Details </label>
+              <label class="control-label">Account Name</label>
                <div class="controls">
                <input type="text" class="input-medium">
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Authorisation Amount for Maintainance </label>
+              <label class="control-label">BSB</label>
                <div class="controls">
                <input type="text" class="input-medium">
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Prefered Trades People </label>
+              <label class="control-label">Account Number </label>
                <div class="controls">
                <input type="text" class="input-medium">
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Name </label>
+              <label class="control-label">Withold $$ </label>
                <div class="controls">
                <input type="text" class="input-medium">
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Trade </label>
-               <div class="controls">
-               <input type="text" class="input-medium">
-              </div>
-             </div>
-              <div class="control-group">
-              <label class="control-label">Conatct Number </label>
-               <div class="controls">
-               <input type="text" class="input-medium">
-              </div>
-             </div>
-              <div class="control-group">
-              <label class="control-label">Additional Notes </label>
+              <label class="control-label">Withold For </label>
                <div class="controls">
                <input type="text" class="input-medium">
               </div>
@@ -428,11 +428,11 @@
            </div><!--payment details div closes here -->
             <div class="tab-pane fade  in" id="trans">
              <div class="control-group">
-              <label class="control-label">Filter </label>
+              <label class="control-label">Select </label>
                <div class="controls">
                 <select class="input-medium">              
-                  <option>Paid to </option>
-                  <option>Recieved from</option>
+                  <option>Payments to the Owner </option>
+                  <option>Recieved from the Owner</option>
                 </select>
               </div>
              </div>
@@ -446,17 +446,8 @@
             </table>
            </div><!--trans for owner ends here-->
             <div class="tab-pane fade  in" id="actions">
-             <div class="control-group">
-              <label class="control-label">Cotact with </label>
-               <div class="controls">
-                <select class="input-medium">              
-                  <option>Owner</option>
-                  <option>Tenant</option>
-                </select>
-              </div>
-             </div>
-             <div class="control-group">
-              <label class="control-label">Cotact Type </label>
+              <div class="control-group">
+              <label class="control-label">Communication with Owner </label>
                <div class="controls">
                 <select class="input-medium">              
                  <option>Conversation</option>
@@ -497,23 +488,13 @@
             </div><!--end of action tab-->  
             <div class="tab-pane fade  in" id="sale">
               <div class="control-group">
-              <label class="control-label">Property Reference Number </label>
-               <div class="controls">
-                <select class="input-medium">
-                  <option>1</option>
-                  <option>2</option>
-                </select>
-              </div>
-             </div>
-
-             <div class="control-group">
-              <label class="control-label">Agent's Name </label>
+              <label class="control-label">Agent Details </label>
                <div class="controls">
                 <input type ="text"class="input-medium">
               </div>
              </div>
               <div class="control-group">
-              <label class="control-label">Sale Date </label>
+              <label class="control-label">Date listed for sale </label>
                <div class="controls">
                 <input type ="text"class="input-medium dt">
               </div>
@@ -527,97 +508,331 @@
                 </select>
               </div>
              </div>
+             <div class="control-group">
+              <label class="control-label">Asking Price </label>
+               <div class="controls">
+                <input type ="text"class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Company Name </label>
+               <div class="controls">
+                <input type ="text"class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Phone </label>
+               <div class="controls">
+                <input type ="text"class="input-medium">
+              </div>
+             </div>
            </div><!--end of sale tab-->
-           <div class="tab-pane fade  in" id="propdetails">
+           <div class="tab-pane fade  in" id="prefer">
              <div class="control-group">
-              <label class="control-label">Number of Properties </label>
+              <label class="control-label">Preferred Trades People </label>
                <div class="controls">
-                <input type ="text"class="input-medium" readonly>
+                <input type ="text"class="input-medium" >
               </div>
              </div>
-              <div class="accordion" id="accordion2">  
-            <div class="accordion-group">  
-              <div class="accordion-heading">  
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">  
-                  Property 1
-                </a>  
-              </div>  
-              <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">  
-                <div class="accordion-inner">  
-               <div class="control-group">
-                <div class="control-group">
-              <label class="control-label">Reference </label>
+              <div class="control-group">
+              <label class="control-label">Company Name </label>
                <div class="controls">
-                <input type ="text"class="input-medium" readonly>
+                <input type ="text"class="input-medium" >
               </div>
              </div>
              <div class="control-group">
-              <label class="control-label">Property Manager </label>
+              <label class="control-label">Trade </label>
                <div class="controls">
-                <input type ="text"class="input-medium" readonly>
+                <input type ="text"class="input-medium" >
               </div>
              </div>
-               <div class="control-group">
+              <div class="control-group">
+              <label class="control-label">Title </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>DR</option>
+                <option>Mr</option>
+                <option>Ms</option>
+                <option>Miss</option>
+                <option>Mrs</option>
+              </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">First Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Middle Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Last Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Prefered Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">ABN </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
               <label class="control-label">Unit Number </label>
                <div class="controls">
-               <input type="text" class="input-medium" readonly>
+               <input type="text" class="input-medium">
               </div>
              </div>
              <div class="control-group">
               <label class="control-label">House Number </label>
                <div class="controls">
-               <input type="text" class="input-medium" readonly>
+               <input type="text" class="input-medium">
               </div>
              </div>
              <div class="control-group">
               <label class="control-label">Street Name </label>
                <div class="controls">
-               <input type="text" class="input-medium" readonly>
+               <input type="text" class="input-medium">
               </div>
              </div>
              <div class="control-group">
               <label class="control-label">Street Type </label>
                <div class="controls">
-               <input type="text" class="input-medium" readonly>
+               <input type="text" class="input-medium">
               </div>
              </div>
              <div class="control-group">
               <label class="control-label">City/Suburb/Town </label>
                <div class="controls">
-               <input type="text" class="input-medium" readonly>
+               <input type="text" class="input-medium">
               </div>
              </div>
              <div class="control-group">
               <label class="control-label">State </label>
                <div class="controls">
-               <input type="text" class="input-medium" readonly>
-                      
+                <select name="state" class="input-medium">
+                <option value>ACT</option value>
+                <option value>NSW</option value>
+                <option value>NT</option value> 
+                <option value>QLD</option value>
+                <option value>SA</option value>
+                <option value>TAS</option value> 
+                <option value>VIC</option value>
+                <option value>WA</option value> 
+            </select>
               </div>
              </div>
              <div class="control-group">
               <label class="control-label">Postcode </label>
                <div class="controls">
-               <input type="text" class="input-medium" readonly>
+               <input type="text" class="input-medium">
               </div>
              </div>
-                       
-           <div class="control-group">
-              <label class="control-label">Ownership </label>
+
+             <div class="control-group">
+              <label class="control-label">Home Number </label>
                <div class="controls">
-                    <select class="input-medium">
-                    <option>Full Owner</option>
-                    <option>Part Owner</option>
-                  </select>
+               <input type="text" class="input-medium">
+              </div>
              </div>
-           </div> 
+             <div class="control-group">
+              <label class="control-label">Business Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Mobile Number1 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Mobile Number2 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Email 1 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Email 2 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+           </div><!--end for prefer tab-->
+           <div class="tab-pane fade  in" id="accountant">
+            <div class="control-group">
+               <div class="control-group">
+              <label class="control-label">Company Name </label>
+               <div class="controls">
+                <input type ="text"class="input-medium" >
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Trade </label>
+               <div class="controls">
+                <input type ="text"class="input-medium" >
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Title </label>
+               <div class="controls">
+               <select class="input-medium">
+                <option>DR</option>
+                <option>Mr</option>
+                <option>Ms</option>
+                <option>Miss</option>
+                <option>Mrs</option>
+              </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">First Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Middle Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Last Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Prefered Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">ABN </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+              <div class="control-group">
+              <label class="control-label">Unit Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">House Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Name </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Street Type </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">City/Suburb/Town </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">State </label>
+               <div class="controls">
+                <select name="state" class="input-medium">
+                <option value>ACT</option value>
+                <option value>NSW</option value>
+                <option value>NT</option value> 
+                <option value>QLD</option value>
+                <option value>SA</option value>
+                <option value>TAS</option value> 
+                <option value>VIC</option value>
+                <option value>WA</option value> 
+            </select>
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Postcode </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
 
-             
-
-
-
-          </div><!--for main div closes here-->
-         </form>
-       <script src="js/jquery.js"></script>
+             <div class="control-group">
+              <label class="control-label">Home Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Business Number </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Mobile Number1 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Mobile Number2 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Email 1 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Email 2 </label>
+               <div class="controls">
+               <input type="text" class="input-medium">
+              </div>
+             </div>
+             <div class="control-group">
+              <label class="control-label">Statement to accountant </label>
+               <div class="controls">
+              <select class="input-medium">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+             </div>
+             </div>
+        </div><!--for main div closes here-->
+        </form>
+     <script src="js/jquery.js"></script>
      <script src="js/jquery-1.8.1.min.js"></script>
      <script src="js/bootstrap-dropdown.js"></script>
      <script src="js/bootstrap-scrollspy.js"></script>
@@ -635,11 +850,12 @@
       <script>
         $('#mytabs a[href="#general"]').tab('show');
         $('#mytabs a[href="#details"]').tab('show'); 
-        $('#mytabs a[href="#propdetails"]').tab('show');
+        $('#mytabs a[href="#prefer"]').tab('show');
         $('#mytabs a[href="#trans"]').tab('show'); 
         $('#mytabs a[href="#actions"]').tab('show');
         $('#mytabs a[href="#paymentdetails"]').tab('show'); 
         $('#mytabs a[href="#sale"]').tab('show');
+        $('#mytabs a[href="#accountant"]').tab('show');
         $('#mytabs a[href="#vacating"]').tab('show');
         $('#mytabs a[href="#tribunal"]').tab('show'); 
         $('#mytabs a[href="#other"]').tab('show');
